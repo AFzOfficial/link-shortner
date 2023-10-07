@@ -1,0 +1,6 @@
+.venv
+venv
+.env
+link.db
+.vscode
+__pycache__
