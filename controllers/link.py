@@ -6,12 +6,8 @@ from utils.link import generate_random_string
 
 
 def get(db: Session, short: str) -> Link | None:
-    link = db.query(Link).filter(Link.short == short).first()
-    
-    if link:
-        return link
-    
-    return None
+    return db.query(Link).filter(Link.short == short).first()
+
 
 
 def create(db: Session, request: LinkInput) -> Link:
